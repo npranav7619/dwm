@@ -889,7 +889,14 @@ static const Key on_empty_keys[] = {
 };
 #endif // ON_EMPTY_KEYS_PATCH
 
+static const char *mutecmd[]={"pactl", "set-sink-mute", "0", "toggle", NULL};
+static const char *volupcmd[]={"pactl", "set-sink-volume", "0", "+5%", NULL};
+static const char *voldowncmd[]={"pactl", "set-sink-volume", "0", "-5%", NULL};
+
 static const Key keys[] = {
+	{ MODKEY,                       XK_F6, spawn, {.v = voldowncmd } },
+	{ MODKEY,                       XK_F5,  spawn, {.v = mutecmd } },
+	{ MODKEY,                       XK_F7, spawn, {.v = volupcmd   } },
 	/* modifier                     key            function                argument */
 	#if KEYMODES_PATCH
 	{ MODKEY,                       XK_Escape,     setkeymode,             {.ui = COMMANDMODE} },
