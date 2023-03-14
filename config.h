@@ -5,7 +5,7 @@
 static const unsigned int borderpx       = 0;   /* border pixel of windows */
 static const int corner_radius           = 10;
 #else
-static const unsigned int borderpx       = 1;   /* border pixel of windows */
+static const unsigned int borderpx       = 2;   /* border pixel of windows */
 #endif // ROUNDED_CORNERS_PATCH
 static const unsigned int snap           = 32;  /* snap pixel */
 #if SWALLOW_PATCH
@@ -154,11 +154,11 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #endif // MONOCLE_LAYOUT
 #endif // BAR_TABGROUPS_PATCH
 #if BAR_PANGO_PATCH
-static const char font[]                 = "monospace 10";
+static const char font[]                 = "monospace 14";
 #else
-static const char *fonts[]               = { "monospace:size=10" };
+static const char *fonts[]               = { "agave Nerd Font Mono:size=14" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "monospace:size=10";
+static const char dmenufont[]            = "agave Nerd Font Mono:size=14";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
@@ -848,6 +848,11 @@ static const char *xkb_layouts[]  = {
 #if !NODMENU_PATCH
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 #endif // NODMENU_PATCH
+
+static const char *mutecmd[]={"pactl", "set-sink-mute", "0", "toggle", NULL};
+static const char *volupcmd[]={"pactl", "set-sink-volume", "0", "+10%", NULL};
+static const char *voldowncmd[]={"pactl", "set-sink-volume", "0", "-10%", NULL};
+
 static const char *dmenucmd[] = {
 	"dmenu_run",
 	#if !NODMENU_PATCH
@@ -863,7 +868,7 @@ static const char *dmenucmd[] = {
 	#endif // BAR_DMENUMATCHTOP_PATCH
 	NULL
 };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 
 #if BAR_STATUSCMD_PATCH
 #if BAR_DWMBLOCKS_PATCH
@@ -890,6 +895,9 @@ static const Key on_empty_keys[] = {
 #endif // ON_EMPTY_KEYS_PATCH
 
 static const Key keys[] = {
+	{ MODKEY,                       XK_F6, spawn, {.v = voldowncmd } },
+	{ MODKEY,                       XK_F5,  spawn, {.v = mutecmd } },
+	{ MODKEY,                       XK_F7, spawn, {.v = volupcmd   } },
 	/* modifier                     key            function                argument */
 	#if KEYMODES_PATCH
 	{ MODKEY,                       XK_Escape,     setkeymode,             {.ui = COMMANDMODE} },
