@@ -1,5 +1,5 @@
 # DWM (forked)
 ## Pre-Requsites
 
-alacritty
-agave Nerd-Font
+### alacritty
+### agave Nerd-Font
