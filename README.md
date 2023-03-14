@@ -1,4 +1,4 @@
-### DWM
+# DWM (forked)
 ## Pre-Requsites
 
 alacritty
