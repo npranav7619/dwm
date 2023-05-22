@@ -1,5 +1,8 @@
 # DWM (forked)
-## Pre-Requsites
+## Pre requisites and list of pgms i use
 
-### alacritty
-### agave Nerd-Font
+
+alacritty
+
+agave Nerd-Font
+
