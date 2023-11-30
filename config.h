@@ -168,9 +168,9 @@ static char normbordercolor[]            = "#444444";
 static char normfloatcolor[]             = "#db8fd9";
 
 static char selfgcolor[]                 = "#eeeeee";
-static char selbgcolor[]                 = "#ffae00";
-static char selbordercolor[]             = "#ffae00";
-static char selfloatcolor[]              = "#ffae00";
+static char selbgcolor[]                 = "#0b2381";
+static char selbordercolor[]             = "#0b2381";
+static char selfloatcolor[]              = "#0b2381";
 
 static char titlenormfgcolor[]           = "#bbbbbb";
 static char titlenormbgcolor[]           = "#222222";
@@ -178,9 +178,9 @@ static char titlenormbordercolor[]       = "#444444";
 static char titlenormfloatcolor[]        = "#db8fd9";
 
 static char titleselfgcolor[]            = "#eeeeee";
-static char titleselbgcolor[]            = "#ffae00";
-static char titleselbordercolor[]        = "#ffae00";
-static char titleselfloatcolor[]         = "#ffae00";
+static char titleselbgcolor[]            = "#0b2381";
+static char titleselbordercolor[]        = "#0b2381";
+static char titleselfloatcolor[]         = "#0b2381";
 
 static char tagsnormfgcolor[]            = "#bbbbbb";
 static char tagsnormbgcolor[]            = "#222222";
@@ -188,11 +188,11 @@ static char tagsnormbordercolor[]        = "#444444";
 static char tagsnormfloatcolor[]         = "#db8fd9";
 
 static char tagsselfgcolor[]             = "#eeeeee";
-static char tagsselbgcolor[]             = "#ffae00";
-static char tagsselbordercolor[]         = "#ffae00";
-static char tagsselfloatcolor[]          = "#ffae00";
+static char tagsselbgcolor[]             = "#0b2381";
+static char tagsselbordercolor[]         = "#0b2381";
+static char tagsselfloatcolor[]          = "#0b2381";
 
-static char hidnormfgcolor[]             = "#ffae00";
+static char hidnormfgcolor[]             = "#0b2381";
 static char hidselfgcolor[]              = "#227799";
 static char hidnormbgcolor[]             = "#222222";
 static char hidselbgcolor[]              = "#222222";
