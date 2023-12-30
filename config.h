@@ -154,11 +154,11 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #endif // MONOCLE_LAYOUT
 #endif // BAR_TABGROUPS_PATCH
 #if BAR_PANGO_PATCH
-static const char font[]                 = "monospace 14";
+static const char font[]                 = "monospace 16";
 #else
-static const char *fonts[]               = { "agave Nerd Font Mono:size=14" };
+static const char *fonts[]               = { "agave Nerd Font Mono:size=16", "3270 Nerd Font Mono:size=16" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "agave Nerd Font Mono:size=14";
+static const char dmenufont[]            = "agave Nerd Font Mono:size=16";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
@@ -443,7 +443,7 @@ static char tagicons[][NUMTAGS][MAX_TAGLEN] =
 static char *tagicons[][NUMTAGS] =
 #endif // NAMETAG_PATCH
 {
-	[DEFAULT_TAGS]        = { "", "", "", "󰙯", "󰓇", "6", "7", "8", "9" },
+	[DEFAULT_TAGS]        = { "", "", "󰨞", "󰙯", "󰓇", "", "7", "8", "9" },
 	[ALTERNATIVE_TAGS]    = { "A", "B", "C", "D", "E", "F", "G", "H", "I" },
 	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },
 };
